@@ -1,0 +1,24 @@
+
+.SitemapPage .SitemapChildren.Root {
+	
+	padding: 30px 0;
+	
+	li {
+		padding: 0 0 0 5px;
+		margin: 0 0 0 20px;
+		list-style-type: disc;
+		font-size: 0.9em;
+	}
+	
+	> li {
+		font-size: 1.4em;
+		padding-bottom: 8px;
+		
+		> a {
+			font-weight: bold;
+			font-family: Arial, sans-serif;
+			font-size: 1.0em;
+			white-space: nowrap;
+		}
+	}
+}
