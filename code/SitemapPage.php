@@ -9,6 +9,8 @@ class SitemapPage extends Page {
 	
 	private static $icon = 'sitemap2/images/sitemap.png';
 	
+	private static $description = 'Page displaying the sitemap for this website as a nested tree';
+	
 	/**
 	 * Retrieves the root pages to be used in the sitemap
 	 * 
