@@ -19,7 +19,12 @@ Visibility of pages can optionally be customised by code.
 
 ## Installation Instructions
 
- * Extract all files into the 'sitemap2' folder under your Silverstripe root.
+ * Either extract the module into the `sitemap2` folder, or install using composer
+
+```bash
+composer require "tractorcow/silverstripe-sitemap2": "3.1.*@dev"
+```
+
  * Do a dev/build to generate the required tables
  * Create a page of type "SitemapPage" in your sitetree
 
