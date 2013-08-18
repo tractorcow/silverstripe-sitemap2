@@ -24,10 +24,10 @@ class SitemapExtension extends SiteTreeExtension {
 	 * @return DataList List of child pages
 	 */
 	public function SitemapChildrenOfParent($parentID) {
-		return DataObject::get('SiteTree')->where(array(
-			sprintf("\"SiteTree\".\"ParentID\" = %d", $parentID),
-			"\"SiteTree\".\"ShowInSearch\" = 1",
-			"\"SiteTree\".\"HideOnSitemap\" = 0"
+		return DataObject::get('SiteTree')->filter(array(
+			"ParentID" => $parentID,
+			"ShowInSearch" => 1,
+			"HideOnSitemap" => 0
 		));
 	}
 	
