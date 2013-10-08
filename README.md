@@ -22,7 +22,7 @@ Visibility of pages can optionally be customised by code.
  * Either extract the module into the `sitemap2` folder, or install using composer
 
 ```bash
-composer require "tractorcow/silverstripe-sitemap2": "3.1.*@dev"
+composer require "tractorcow/silverstripe-sitemap2" "3.1.*@dev"
 ```
 
  * Do a dev/build to generate the required tables
