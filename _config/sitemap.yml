@@ -1,6 +1,6 @@
 ---
 Name: sitemapconfig
 ---
-SiteTree:
+SilverStripe\CMS\Model\SiteTree:
   extensions:
-    - 'SitemapExtension'
+    - Tractorcow\Sitemap2\SitemapExtension
