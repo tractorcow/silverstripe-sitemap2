@@ -15,14 +15,14 @@ Visibility of pages can optionally be customised by code.
 
 ## Requirements
 
- * SilverStripe 3.1
+ * SilverStripe 4
 
 ## Installation Instructions
 
  * Either extract the module into the `sitemap2` folder, or install using composer
 
 ```bash
-composer require "tractorcow/silverstripe-sitemap2" "3.1.*@dev"
+composer require tractorcow/silverstripe-sitemap2
 ```
 
  * Do a dev/build to generate the required tables
