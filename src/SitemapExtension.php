@@ -49,7 +49,7 @@ class SitemapExtension extends SiteTreeExtension
      */
     public function RenderSitemap()
     {
-        return $this->owner->renderWith('Tractorcow\\Sitemap2\\SitemapEntry');
+        return $this->owner->renderWith('TractorCow\\Sitemap2\\SitemapEntry');
     }
 
     public function updateSettingsFields(FieldList $fields)
