@@ -1,24 +1,35 @@
 {
-	"name": "tractorcow/silverstripe-sitemap2",
-	"description": "Better, simpler sitemap module for SilverStripe",
-	"type": "silverstripe-module",
-	"keywords": ["silverstripe", "sitemap"],
-	"license": "BSD-3-Clause",
-	"authors": [
-		{
-			"name": "Damian Mooyman",
-			"email": "damian.mooyman@gmail.com"
-		}
-	],
-	"support": {
-		"issues": "https://github.com/tractorcow/silverstripe-sitemap2/issues"
-	},
-	"require": {
-		"silverstripe/framework": "^3.1",
-		"silverstripe/cms": "^3.1",
-		"composer/installers": "*"
-	},
-	"extra": {
-		"installer-name": "sitemap2"
-	}
+    "name": "tractorcow/silverstripe-sitemap2",
+    "description": "Better, simpler sitemap module for SilverStripe",
+    "type": "silverstripe-vendormodule",
+    "keywords": ["silverstripe", "sitemap"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Damian Mooyman",
+            "email": "damian.mooyman@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/tractorcow/silverstripe-sitemap2/issues"
+    },
+    "require": {
+        "silverstripe/framework": "^4",
+        "silverstripe/cms": "^4",
+        "silverstripe/vendor-plugin": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TractorCow\\Sitemap2\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.x-dev"
+        },
+        "expose": [
+            "css",
+            "images"
+        ]
+    }
 }
