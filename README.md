@@ -15,7 +15,7 @@ Visibility of pages can optionally be customised by code.
 
 ## Requirements
 
- * SilverStripe 4
+ * SilverStripe 6
 
 ## Installation Instructions
 

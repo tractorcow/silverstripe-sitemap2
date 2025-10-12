@@ -14,9 +14,7 @@
         "issues": "https://github.com/tractorcow/silverstripe-sitemap2/issues"
     },
     "require": {
-        "silverstripe/framework": "^4",
-        "silverstripe/cms": "^4",
-        "silverstripe/vendor-plugin": "^1.0"
+        "silverstripe/framework": "^6"
     },
     "autoload": {
         "psr-4": {
@@ -24,12 +22,9 @@
         }
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "4.x-dev"
-        },
         "expose": [
-            "css",
-            "images"
+            "client/dist/css",
+            "client/dist/images"
         ]
     }
 }

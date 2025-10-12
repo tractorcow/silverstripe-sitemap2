@@ -3,21 +3,21 @@
 namespace TractorCow\Sitemap2;
 
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Core\Extension;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataList;
 use SilverStripe\ORM\DataObject;
-use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\CheckboxField;
-use SilverStripe\CMS\Model\SiteTreeExtension;
 
 /**
  * @author Damian Mooyman
  *
  * @property SiteTree|SitemapExtension $owner
  */
-class SitemapExtension extends SiteTreeExtension
+class SitemapExtension extends Extension
 {
     private static $db = [
-        'HideOnSitemap' => 'Boolean' // Allows manual hiding on page
+        'ShowOnSitemap' => 'Boolean(1)'
     ];
 
     public function SitemapChildren()
@@ -37,7 +37,7 @@ class SitemapExtension extends SiteTreeExtension
         return DataObject::get(SiteTree::class)->filter([
             "ParentID" => $parentID,
             "ShowInSearch" => 1,
-            "HideOnSitemap" => 0
+            "ShowOnSitemap" => 1
         ]);
     }
 
@@ -52,11 +52,14 @@ class SitemapExtension extends SiteTreeExtension
         return $this->owner->renderWith('TractorCow\\Sitemap2\\SitemapEntry');
     }
 
+    public function updateCMSFields(FieldList $fields) {
+        $fields->removeByName('ShowOnSitemap');
+    }
+
     public function updateSettingsFields(FieldList $fields)
     {
-        // Allow pages to opt out of sitemap visibility.
-        // By default non-searchable pages (such as search result pages,
-        // form submission landing pages, etc are hidden)
-        $fields->addFieldToTab('Root.Settings', new CheckboxField('HideOnSitemap'), 'ShowInMenus');
+        $fields->addFieldToTab('Root.Settings',
+            CheckboxField::create('ShowOnSitemap'),
+            'ShowInMenus');
     }
 }

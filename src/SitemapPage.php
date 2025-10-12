@@ -14,7 +14,7 @@ class SitemapPage extends Page
 {
     private static $table_name = 'SitemapPage';
 
-    private static $icon = 'tractorcow/silverstripe-sitemap2:images/sitemap.png';
+    private static $icon = 'tractorcow/silverstripe-sitemap2:client/dist/images/sitemap.png';
 
     private static $description = 'Page displaying the sitemap for this website as a nested tree';
 
