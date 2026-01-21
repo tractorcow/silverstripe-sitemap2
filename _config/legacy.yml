@@ -1,0 +1,7 @@
+---
+Name: sitemap2-legacy
+---
+# Mapping rules to map old model-classes to new ones.
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    SitemapPage: TractorCow\Sitemap2\SitemapPage
